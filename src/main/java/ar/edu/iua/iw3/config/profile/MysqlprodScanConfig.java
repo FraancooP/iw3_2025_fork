@@ -8,8 +8,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @Configuration
 @EnableJpaRepositories(basePackages = {
     "ar.edu.iua.iw3.model.persistence",
-    "ar.edu.iua.iw3.auth.persistence"
-})
+    "ar.edu.iua.iw3.auth.persistence",},excludeFilters = {
+    		//@ComponentScan.Filter(type = FilterType.REGEX, pattern = "ar\\.edu\\.iua\\.iw3\\.integration\\.cli1\\..*" ),
+    		//@ComponentScan.Filter(type = FilterType.REGEX, pattern = "ar\\.edu\\.iua\\.iw3\\.integration\\.cli2\\..*" )
+    })
 @EntityScan(basePackages = { 
     "ar.edu.iua.iw3.model", 
     "ar.edu.iua.iw3.auth"
